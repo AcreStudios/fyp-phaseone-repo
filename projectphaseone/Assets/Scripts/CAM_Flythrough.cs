@@ -26,7 +26,7 @@ public class CAM_Flythrough : MonoBehaviour
 	{
 		_rotationX += Input.GetAxis("Mouse X") * Time.deltaTime * lookSpeed;
 		_rotationY += Input.GetAxis("Mouse Y") * Time.deltaTime * lookSpeed;
-		_rotationY = Mathf.Clamp(_rotationY, -90, 90);
+		_rotationY = Mathf.Clamp(_rotationY, -360f, 360f);
 
 		transform.localRotation = Quaternion.AngleAxis(_rotationX, Vector3.up);
 		transform.localRotation *= Quaternion.AngleAxis(_rotationY, Vector3.left);
