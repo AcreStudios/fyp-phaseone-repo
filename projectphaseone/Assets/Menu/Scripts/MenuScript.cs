@@ -343,8 +343,8 @@ public class MenuScript : MonoBehaviour {
 
     //Selecting Individual Buttons Handling System *****************
     public void SelectSettings() {
-        MainMenu.enabled = false;
         SettingsMenu.enabled = true;
+        MainMenu.enabled = false;
     }
     public void SelectBack() {
         SettingsMenu.enabled = false;
