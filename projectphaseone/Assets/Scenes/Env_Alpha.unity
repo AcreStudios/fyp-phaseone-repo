@@ -1610,6 +1610,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13545836, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
   m_IsPrefabParent: 0
