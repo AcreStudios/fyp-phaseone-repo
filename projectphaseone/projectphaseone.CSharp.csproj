@@ -18,6 +18,7 @@
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.5f1</UnityVersion>
     <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,6 +73,13 @@
     <Compile Include="Assets\Menu\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Menu\Scripts\VideoScript.cs" />
     <Compile Include="Assets\Scripts\CAM_Flythrough.cs" />
+    <Compile Include="Assets\Scripts\FPS_AnimationHandler.cs" />
+    <Compile Include="Assets\Scripts\FPS_Camera.cs" />
+    <Compile Include="Assets\Scripts\FPS_CameraShake.cs" />
+    <Compile Include="Assets\Scripts\FPS_Movement.cs" />
+    <Compile Include="Assets\Scripts\FPS_PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\FPS_Shooting.cs" />
+    <Compile Include="Assets\Scripts\_PerlinScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\CinematicEffects(ALPHA)\AntiAliasing\FXAA\Resources\FXAA.shader" />
