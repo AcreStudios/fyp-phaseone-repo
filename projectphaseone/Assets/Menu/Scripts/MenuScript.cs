@@ -381,7 +381,7 @@ public class MenuScript : MonoBehaviour {
 
     IEnumerator loadingtime() {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("GI and Reflective Test v2");
+        SceneManager.LoadScene("Env_Alpha");
     }
 
 }

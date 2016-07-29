@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 [RequireComponent(typeof(UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration))]
 [RequireComponent(typeof(UnityStandardAssets.ImageEffects.NoiseAndGrain))]
 public class FPS_EVision : MonoBehaviour 
 {
 	public UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration vignette;
 	public UnityStandardAssets.ImageEffects.NoiseAndGrain noise;
-
+	public UnityStandardAssets.CinematicEffects.ScreenSpaceReflection reflection;
 	private Camera cam;
 	private Camera EVcam;
 	private FPS_EVisionReplacement EVreplace;
@@ -23,6 +23,7 @@ public class FPS_EVision : MonoBehaviour
 	{
 		vignette = GetComponent<UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration>();
 		noise = GetComponent<UnityStandardAssets.ImageEffects.NoiseAndGrain>();
+		reflection = GetComponent<UnityStandardAssets.CinematicEffects.ScreenSpaceReflection>();
 
 		cam = GetComponent<Camera>();
 		EVcam = cam.transform.GetChild(0).GetComponent<Camera>();
@@ -76,6 +77,7 @@ public class FPS_EVision : MonoBehaviour
 	{
 		cam.renderingPath = RenderingPath.Forward;
 		EVreplace.enabled = true;
+		reflection.enabled = false;
 
 		while(progress < 1f)
 		{
@@ -91,6 +93,7 @@ public class FPS_EVision : MonoBehaviour
 		cam.renderingPath = RenderingPath.DeferredShading;
 		EVreplace.enabled = false;
 		EVcam.ResetReplacementShader();
+		reflection.enabled = true;
 
 		while(progress > 0f)
 		{
