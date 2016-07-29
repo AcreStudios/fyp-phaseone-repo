@@ -943,59 +943,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460966, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &401282611 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 182858, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
-  m_PrefabInternal: {fileID: 401282610}
---- !u!114 &401282612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401282611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3ff4a1bef2e8d47a1dfb734aa54de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    basicSettings:
-      reflectionMultiplier: 1
-      maxDistance: 100
-      fadeDistance: 100
-      screenEdgeFading: 0.03
-      enableHDR: 1
-      additiveReflection: 0
-    reflectionSettings:
-      maxSteps: 128
-      rayStepSize: 3
-      widthModifier: 0.5
-      smoothFallbackThreshold: 0.2
-      smoothFallbackDistance: 0.05
-      fresnelFade: 0.2
-      fresnelFadePower: 2
-      distanceBlur: 1
-    advancedSettings:
-      temporalFilterStrength: 0.7
-      useTemporalConfidence: 1
-      traceBehindObjects: 1
-      highQualitySharpReflections: 1
-      traceEverywhere: 1
-      treatBackfaceHitAsMiss: 0
-      allowBackwardsRays: 0
-      improveCorners: 1
-      resolution: 1
-      bilateralUpsample: 1
-      reduceBanding: 1
-      highlightSuppression: 0
-    debugSettings:
-      debugMode: 0
-  m_Shader: {fileID: 4800000, guid: 7e2fcc83af19e744787647ec0ac5d42c, type: 3}
 --- !u!1 &412578081 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: acc50413c80a40b428afbb461996c3de, type: 3}
@@ -2143,7 +2095,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 215b8f6ffa8df794a82e6f51254d128c, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 215b8f6ffa8df794a82e6f51254d128c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2355,21 +2307,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: acc50413c80a40b428afbb461996c3de, type: 3}
---- !u!1 &1272219525 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 111682, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
-  m_PrefabInternal: {fileID: 401282610}
---- !u!114 &1272219526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1272219525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ece9971665e675c43a9a26fc8d880029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1283134408 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a971b5d8cabbd6a44844f845019be091, type: 3}

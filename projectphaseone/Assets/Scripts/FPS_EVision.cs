@@ -56,7 +56,7 @@ public class FPS_EVision : MonoBehaviour
 	{
 		vignette.intensity = Mathf.Lerp(0f, .33f, progress);
 		vignette.blur = Mathf.Lerp(0f, .66f, progress);
-		noise.intensityMultiplier = Mathf.Lerp(0f, 4f, progress);
+		noise.intensityMultiplier = Mathf.Lerp(0f, 5f, progress);
 
 		if(FPS_PlayerInput.instance.eBtn)
 		{
@@ -76,6 +76,7 @@ public class FPS_EVision : MonoBehaviour
 	IEnumerator SwitchToVision()
 	{
 		cam.renderingPath = RenderingPath.Forward;
+		EVcam.enabled = true;
 		EVreplace.enabled = true;
 		reflection.enabled = false;
 
@@ -91,6 +92,7 @@ public class FPS_EVision : MonoBehaviour
 	IEnumerator SwitchToNormal()
 	{
 		cam.renderingPath = RenderingPath.DeferredShading;
+		EVcam.enabled = false;
 		EVreplace.enabled = false;
 		EVcam.ResetReplacementShader();
 		reflection.enabled = true;
