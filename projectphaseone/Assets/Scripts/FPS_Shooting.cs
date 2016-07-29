@@ -34,7 +34,7 @@ public class FPS_Shooting : MonoBehaviour
 	private Vector3 targetPos;
 	private Quaternion targetRot;
 	public float changeFOVSpeed = 5f;
-	public float switchSpeed = 10f;
+	public float switchSpeed = 20f;
 
 	//[Header("Effects")]
 	//public ParticleSystem[] muzzleFlash;

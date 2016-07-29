@@ -18,6 +18,8 @@ public class FPS_PlayerInput : MonoBehaviour
 	public bool fire2;
 	public bool fire3;
 
+	public bool eBtn;
+
 	void Awake()
 	{
 		instance = this;
@@ -33,5 +35,7 @@ public class FPS_PlayerInput : MonoBehaviour
 		fire1 = Input.GetButton("Fire1");
 		fire2 = Input.GetButton("Fire2");
 		fire3 = Input.GetButton("Fire3");
+
+		eBtn = Input.GetKeyDown(KeyCode.E);
 	}
 }
