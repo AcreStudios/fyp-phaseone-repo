@@ -72,6 +72,7 @@
     <Compile Include="Assets\Menu\Scripts\Killurself.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Menu\Scripts\VideoScript.cs" />
+    <Compile Include="Assets\Scripts\AIBase.cs" />
     <Compile Include="Assets\Scripts\CAM_Flythrough.cs" />
     <Compile Include="Assets\Scripts\FPS_AnimationHandler.cs" />
     <Compile Include="Assets\Scripts\FPS_Camera.cs" />
@@ -81,6 +82,8 @@
     <Compile Include="Assets\Scripts\FPS_Movement.cs" />
     <Compile Include="Assets\Scripts\FPS_PlayerInput.cs" />
     <Compile Include="Assets\Scripts\FPS_Shooting.cs" />
+    <Compile Include="Assets\Scripts\Level1AI.cs" />
+    <Compile Include="Assets\Scripts\PlayerTrigger.cs" />
     <Compile Include="Assets\Scripts\_PerlinScript.cs" />
   </ItemGroup>
   <ItemGroup>
