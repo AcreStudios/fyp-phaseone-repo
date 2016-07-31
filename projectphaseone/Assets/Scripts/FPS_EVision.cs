@@ -20,6 +20,11 @@ public class FPS_EVision : MonoBehaviour
 	public float progress = 0f;
 
 	private bool switchedToEV = false;
+	private bool isSwitching = false;
+
+	[Header("Effects")]
+	public AudioSource eVisionOnSFX;
+	public AudioSource eVisionOffSFX;
 
 	void Awake()
 	{
@@ -66,16 +71,10 @@ public class FPS_EVision : MonoBehaviour
 
 		if(FPS_PlayerInput.instance.eBtn)
 		{
-			if(!switchedToEV)
-			{
-				StopAllCoroutines();
+			if(!switchedToEV && !isSwitching)
 				StartCoroutine(SwitchToVision());
-			}
-			else
-			{
-				StopAllCoroutines();
+			else if(switchedToEV && !isSwitching)
 				StartCoroutine(SwitchToNormal());
-			}
 		}
 
 		Shader.SetGlobalFloat("_GlobalEVision", progress);
@@ -88,6 +87,9 @@ public class FPS_EVision : MonoBehaviour
 		EVreplace.enabled = true;
 		reflection.enabled = false;
 
+		eVisionOnSFX.Play();
+		isSwitching = true;
+
 		while(progress < 1f)
 		{
 			progress += Time.deltaTime;
@@ -95,6 +97,7 @@ public class FPS_EVision : MonoBehaviour
 		}
 
 		switchedToEV = true;
+		isSwitching = false;
 	}
 
 	IEnumerator SwitchToNormal()
@@ -105,13 +108,17 @@ public class FPS_EVision : MonoBehaviour
 		//EVcam.ResetReplacementShader();
 		reflection.enabled = true;
 
+		eVisionOffSFX.Play();
+		isSwitching = true;
+
 		while(progress > 0f)
 		{
-			progress -= Time.deltaTime;
+			progress -= Time.deltaTime * 2f;
 			yield return null;
 		}
 
 		switchedToEV = false;
+		isSwitching = false;
 
 		//cam.renderingPath = RenderingPath.DeferredShading;
 		EVcam.enabled = false;

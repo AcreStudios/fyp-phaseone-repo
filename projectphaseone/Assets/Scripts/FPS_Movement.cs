@@ -13,6 +13,10 @@ public class FPS_Movement : MonoBehaviour
 	Rigidbody rigidB;
 	Transform playerParent;
 
+	public AudioSource[] footsteps;
+	private float footstepTimer = .5f;
+	private float footstepCounter = 0f;
+
 	void Awake()
 	{
 		rigidB = GetComponent<Rigidbody>();
@@ -39,5 +43,23 @@ public class FPS_Movement : MonoBehaviour
 
 		rigidB.AddForce(playerParent.forward * FPS_PlayerInput.instance.vertical * moveSpeed);
 		rigidB.AddForce(playerParent.right * FPS_PlayerInput.instance.horizontal * moveSpeed);
+
+		if(FPS_PlayerInput.instance.vertical != 0f || FPS_PlayerInput.instance.horizontal != 0f)
+		{
+			footstepCounter += Time.deltaTime;
+			if(footstepCounter > footstepTimer)
+			{
+				footstepCounter = 0f;
+				PlayFootsteps();
+			}
+		}
+			
+	}
+
+	void PlayFootsteps()
+	{
+		int chooseIndex = Random.Range(0, 4);
+
+		footsteps[chooseIndex].Play();
 	}
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class FPS_Shooting : MonoBehaviour 
 {
 	[Header("Shooting")]
+	public float fireDamage = 20f;
 	public float fireRate = 0.1f;
 	private WaitForSeconds fRate;
 	private bool canFire;
@@ -36,9 +37,9 @@ public class FPS_Shooting : MonoBehaviour
 	public float changeFOVSpeed = 5f;
 	public float switchSpeed = 20f;
 
-	//[Header("Effects")]
+	[Header("Effects")]
 	//public ParticleSystem[] muzzleFlash;
-	//public AudioSource gunShotSFX;
+	public AudioSource gunShotSFX;
 	//public GameObject impactParticlePrefab;
 	//public Animator weaponAnimator;
 
@@ -170,6 +171,9 @@ public class FPS_Shooting : MonoBehaviour
 		Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 		RaycastHit hit;
 
+		// Play gun shot sound
+		gunShotSFX.Play();
+
 		Debug.DrawRay(cam.transform.position, cam.transform.forward, Color.red, 1f);
 		if(Physics.Raycast(ray, out hit, shootRange))
 		{
@@ -178,7 +182,8 @@ public class FPS_Shooting : MonoBehaviour
 			//impactParticle.transform.LookAt(transform.position);
 
 			// Damage object/enemies
-			//if(hit.transform.GetComponent<Health>())
+			if(hit.transform.GetComponent<Level1AI>())
+				hit.transform.GetComponent<Level1AI>().DamageRecieved(fireDamage);
 
 			Debug.Log(hit.transform.name);
 		}
