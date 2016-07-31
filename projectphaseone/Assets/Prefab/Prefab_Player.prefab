@@ -246,6 +246,7 @@ GameObject:
   - 124: {fileID: 12443604}
   - 92: {fileID: 9299016}
   - 114: {fileID: 11443308}
+  - 114: {fileID: 11448548}
   m_Layer: 0
   m_Name: EV Camera
   m_TagString: Untagged
@@ -975,6 +976,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   XRayShader: {fileID: 4800000, guid: 84240e73366eb5c4e8b59637ca416535, type: 3}
+--- !u!114 &11448548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.01
+  intensity: 1
+  blurSize: 0.5
+  blurIterations: 1
+  blurType: 0
+  fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
 --- !u!114 &11451536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,7 +1142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vignette: {fileID: 11473580}
   noise: {fileID: 11466426}
-  reflection: {fileID: 0}
+  reflection: {fileID: 11451536}
+  bloomO: {fileID: 11448548}
   progress: 0
 --- !u!124 &12443604
 Behaviour:

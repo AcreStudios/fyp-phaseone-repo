@@ -60,11 +60,12 @@
 			}
 
 			float4 _EdgeColor;
+			uniform float _GlobalEVision;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float NdotV = 1 - dot(i.normal, i.viewDir) * 1.5;
-				return _EdgeColor * NdotV;
+				return _EdgeColor * NdotV * _GlobalEVision;
 			}
 
 			ENDCG

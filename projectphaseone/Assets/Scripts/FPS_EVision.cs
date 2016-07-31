@@ -10,6 +10,8 @@ public class FPS_EVision : MonoBehaviour
 	public UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration vignette;
 	public UnityStandardAssets.ImageEffects.NoiseAndGrain noise;
 	public UnityStandardAssets.CinematicEffects.ScreenSpaceReflection reflection;
+	public UnityStandardAssets.ImageEffects.BloomOptimized bloomO;
+
 	private Camera cam;
 	private Camera EVcam;
 	private FPS_EVisionReplacement EVreplace;
@@ -24,6 +26,7 @@ public class FPS_EVision : MonoBehaviour
 		vignette = GetComponent<UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration>();
 		noise = GetComponent<UnityStandardAssets.ImageEffects.NoiseAndGrain>();
 		reflection = GetComponent<UnityStandardAssets.CinematicEffects.ScreenSpaceReflection>();
+		//bloomO = EVcam.transform.GetComponent<UnityStandardAssets.ImageEffects.BloomOptimized>();
 
 		cam = GetComponent<Camera>();
 		EVcam = cam.transform.GetChild(0).GetComponent<Camera>();
@@ -54,9 +57,12 @@ public class FPS_EVision : MonoBehaviour
 
 	void Update() 
 	{
+		EVcam.fieldOfView = Camera.main.fieldOfView;
+
 		vignette.intensity = Mathf.Lerp(0f, .33f, progress);
 		vignette.blur = Mathf.Lerp(0f, .66f, progress);
 		noise.intensityMultiplier = Mathf.Lerp(0f, 5f, progress);
+		bloomO.intensity = Mathf.Lerp(0f, 1f, progress);
 
 		if(FPS_PlayerInput.instance.eBtn)
 		{
@@ -71,6 +77,8 @@ public class FPS_EVision : MonoBehaviour
 				StartCoroutine(SwitchToNormal());
 			}
 		}
+
+		Shader.SetGlobalFloat("_GlobalEVision", progress);
 	}
 
 	IEnumerator SwitchToVision()
@@ -92,9 +100,9 @@ public class FPS_EVision : MonoBehaviour
 	IEnumerator SwitchToNormal()
 	{
 		cam.renderingPath = RenderingPath.DeferredShading;
-		EVcam.enabled = false;
-		EVreplace.enabled = false;
-		EVcam.ResetReplacementShader();
+		//EVcam.enabled = false;
+		//EVreplace.enabled = false;
+		//EVcam.ResetReplacementShader();
 		reflection.enabled = true;
 
 		while(progress > 0f)
@@ -104,5 +112,11 @@ public class FPS_EVision : MonoBehaviour
 		}
 
 		switchedToEV = false;
+
+		//cam.renderingPath = RenderingPath.DeferredShading;
+		EVcam.enabled = false;
+		EVreplace.enabled = false;
+		EVcam.ResetReplacementShader();
+		//reflection.enabled = true;
 	}
 }
