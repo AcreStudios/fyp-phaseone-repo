@@ -182,8 +182,8 @@ public class FPS_Shooting : MonoBehaviour
 			//impactParticle.transform.LookAt(transform.position);
 
 			// Damage object/enemies
-			if(hit.transform.GetComponent<Level1AI>())
-				hit.transform.GetComponent<Level1AI>().DamageRecieved(fireDamage);
+			if(hit.transform.GetComponent<AIBase>())
+				hit.transform.GetComponent<AIBase>().DamageRecieved(fireDamage);
 
 			Debug.Log(hit.transform.name);
 		}
