@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using System;
 
 public class AIBase : MonoBehaviour {
-    //Head rotation in if possible
-    //Shooting cooldown
-    //Walking?
 
     Transform[] guns = new Transform[2];
     public Vector2 rotationRange;
@@ -24,6 +20,7 @@ public class AIBase : MonoBehaviour {
     float shootingTime;
     float rotateTime;
     bool ableToRotate;
+    protected Vector3 startingPoint;
 
     void Awake() {
         Health = 100;
@@ -72,10 +69,30 @@ public class AIBase : MonoBehaviour {
         target = player;
     }
 
+    public void GroupWithAllies() {
+        GameObject[] troops = GameObject.FindGameObjectsWithTag("Enemy");
+        float dist;
+        dist = Mathf.Infinity;
+
+        foreach (GameObject troop in troops) {
+            if (troop != gameObject) {
+                float tempDist;
+
+                tempDist = (troop.transform.position - startingPoint).magnitude;
+
+                if (dist > tempDist) {
+                    dist = tempDist;
+                    startingPoint = troop.transform.position;
+                }
+            }
+        }
+    }
+
     public bool Shooting() {
         if (Time.time > shootingTime) {
             if ((target.position - transform.position).magnitude < range) {
                 Vector3 offset;
+                AlertOtherTroops();
 
                 offset = new Vector3(Random.Range(-gunSprayValue, gunSprayValue), Random.Range(-gunSprayValue, gunSprayValue), 0);
                 foreach (Transform gun in guns) {
