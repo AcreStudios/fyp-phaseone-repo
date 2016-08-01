@@ -40,7 +40,7 @@ public class FPS_Shooting : MonoBehaviour
 	[Header("Effects")]
 	//public ParticleSystem[] muzzleFlash;
 	public AudioSource gunShotSFX;
-	//public GameObject impactParticlePrefab;
+	public GameObject impactParticlePrefab;
 	//public Animator weaponAnimator;
 
 	public bool debugAim = false;
@@ -75,6 +75,8 @@ public class FPS_Shooting : MonoBehaviour
 		// For shooting
 		fRate = new WaitForSeconds(fireRate);
 		canFire = true;
+
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void FixedUpdate() 
@@ -175,11 +177,12 @@ public class FPS_Shooting : MonoBehaviour
 		gunShotSFX.Play();
 
 		Debug.DrawRay(cam.transform.position, cam.transform.forward, Color.red, 1f);
-		if(Physics.Raycast(ray, out hit, shootRange))
+		if(Physics.Raycast(ray, out hit, shootRange, LayerMask.NameToLayer("Shootable")))
 		{
 			// Spawn impact prefab
-			//GameObject impactParticle = (GameObject)Instantiate(impactParticlePrefab, hit.point, Quaternion.identity);
-			//impactParticle.transform.LookAt(transform.position);
+			GameObject impactParticle = (GameObject)Instantiate(impactParticlePrefab, hit.point, Quaternion.identity);
+			impactParticle.transform.LookAt(transform.position);
+			Destroy(impactParticle, 1f);
 
 			// Damage object/enemies
 			if(hit.transform.GetComponent<AIBase>())

@@ -1193,7 +1193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460966, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11436282, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
       propertyPath: gunShotSFX
@@ -1226,6 +1226,14 @@ Prefab:
     - target: {fileID: 11473580, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436282, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
+      propertyPath: impactParticlePrefab
+      value: 
+      objectReference: {fileID: 108026, guid: b561ddc0a9af9ac4f8f236dd218a5b81, type: 2}
+    - target: {fileID: 11436282, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
+      propertyPath: fireRate
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 712ab7ab247bd6a4d854711c81602663, type: 2}
@@ -1660,7 +1668,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444814, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 13545836, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_IsTrigger
@@ -1677,6 +1685,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -2186,7 +2198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444814, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 13545836, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_IsTrigger
@@ -2203,6 +2215,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -2316,6 +2332,10 @@ Prefab:
     - target: {fileID: 444814, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -2470,6 +2490,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e500c7c257879a4e98e39abbbaace26, type: 2}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11451294, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -3096,7 +3120,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cc67698246e61c47b0348d85e176587, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cc67698246e61c47b0348d85e176587, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3491,7 +3515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444814, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 13545836, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_IsTrigger
@@ -3508,6 +3532,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -3600,7 +3628,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444814, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 13545836, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_IsTrigger
@@ -3617,6 +3645,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -3858,6 +3890,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e500c7c257879a4e98e39abbbaace26, type: 2}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11451294, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -3996,6 +4032,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
@@ -4299,6 +4339,10 @@ Prefab:
     - target: {fileID: 122440, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
       propertyPath: m_Name
       value: Hana_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180374, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d5d3a3e1e87eb9428e2b2d39955eb16, type: 2}
