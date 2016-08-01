@@ -61,12 +61,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="projectphaseone.CSharp.Plugins.csproj">
@@ -80,6 +74,7 @@
     <Compile Include="Assets\Menu\Scripts\VideoScript.cs" />
     <Compile Include="Assets\Scripts\AIBase.cs" />
     <Compile Include="Assets\Scripts\CAM_Flythrough.cs" />
+    <Compile Include="Assets\Scripts\Experiments\CastingExperiment.cs" />
     <Compile Include="Assets\Scripts\FPS_AnimationHandler.cs" />
     <Compile Include="Assets\Scripts\FPS_Camera.cs" />
     <Compile Include="Assets\Scripts\FPS_CameraShake.cs" />
@@ -89,6 +84,7 @@
     <Compile Include="Assets\Scripts\FPS_PlayerInput.cs" />
     <Compile Include="Assets\Scripts\FPS_Shooting.cs" />
     <Compile Include="Assets\Scripts\Level1AI.cs" />
+    <Compile Include="Assets\Scripts\Level2AI.cs" />
     <Compile Include="Assets\Scripts\PlayerTrigger.cs" />
     <Compile Include="Assets\Scripts\_PerlinScript.cs" />
   </ItemGroup>
@@ -97,6 +93,7 @@
     <None Include="Assets\Shaders\Normal-Diffuse-XRay-Replaceable.shader" />
     <None Include="Assets\Shaders\StandardEVision.shader" />
     <None Include="Assets\Shaders\XRay-ColoredOutline.shader" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Effects\CinematicEffects(ALPHA)\AntiAliasing\FXAA\Resources\FXAA.shader" />
     <None Include="Assets\Standard Assets\Effects\CinematicEffects(ALPHA)\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
     <None Include="Assets\Standard Assets\Effects\CinematicEffects(ALPHA)\AntiAliasing\SMAA\Resources\SMAA.cginc" />
@@ -190,6 +187,10 @@
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
