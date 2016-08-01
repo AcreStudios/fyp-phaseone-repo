@@ -32,6 +32,8 @@ public class AIBase : MonoBehaviour {
     }
 
     public virtual void DamageRecieved(float damage) {
+        target = GameObject.Find("Prefab_Player").transform;
+        AlertOtherTroops();
         Health -= damage;
         if (Health <= 0) {
             Destroy(gameObject);
